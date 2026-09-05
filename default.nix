@@ -23,7 +23,7 @@ rec {
   shimelinux = pkgs.callPackage ./pkgs/shimelinux { };
   utmt-cli = pkgs.callPackage ./pkgs/utmt-cli { };
   pvpn = pkgs.callPackage ./pkgs/pvpn { };
-  twintailauncher = pkgs.callPackage ./pkgs/twintailauncher/twintailauncher { inherit twintailauncher-unwrapped; };
-  twintailauncher-unwrapped = pkgs.callPackage ./pkgs/twintailauncher/twintailauncher-unwrapped { };
+  twintaillauncher = pkgs.callPackage ./pkgs/twintaillauncher/twintaillauncher { inherit twintaillauncher-unwrapped; };
+  twintaillauncher-unwrapped = pkgs.callPackage ./pkgs/twintaillauncher/twintaillauncher-unwrapped { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
 }

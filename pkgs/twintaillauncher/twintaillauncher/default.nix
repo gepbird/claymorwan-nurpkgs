@@ -2,7 +2,7 @@
 {
   lib,
   buildFHSEnv,
-  twintailauncher-unwrapped,
+  twintaillauncher-unwrapped,
   extraPkgs ? pkgs: [ ],
   extraLibraries ? pkgs: [ ],
 }:
@@ -59,13 +59,13 @@ let
 in
 buildFHSEnv {
   pname = "twintaillauncher";
-  inherit (twintailauncher-unwrapped) version meta;
+  inherit (twintaillauncher-unwrapped) version meta;
 
-  runScript = lib.getExe twintailauncher-unwrapped;
+  runScript = lib.getExe twintaillauncher-unwrapped;
   multiArch = true;
  
   targetPkgs = pkgs: with pkgs; [
-    twintailauncher-unwrapped
+    twintaillauncher-unwrapped
     
     # Launcher dependencies
     # gsettings-desktop-schemas
@@ -196,8 +196,8 @@ buildFHSEnv {
   
   extraInstallCommands = ''
     mkdir -p $out/share
-    ln -sf ${twintailauncher-unwrapped}/share/applications $out/share
-    ln -sf ${twintailauncher-unwrapped}/share/icons $out/share
+    ln -sf ${twintaillauncher-unwrapped}/share/applications $out/share
+    ln -sf ${twintaillauncher-unwrapped}/share/icons $out/share
   '';
 
   # allows for some gui applications to share IPC
