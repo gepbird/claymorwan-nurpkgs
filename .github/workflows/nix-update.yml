@@ -17,6 +17,6 @@ jobs:
         with:
           nix_path: "nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-unstable.tar.gz"
       - name: Update flake packages
-        uses: gepbird/nix-update-action@f9912ae04512a62058e27ef1c334c631f778bbcd
+        uses: gepbird/nix-update-action@d10413b00318b5e21d41910cf802361482c18fde
         with:
           packages: "utmt-cli"
