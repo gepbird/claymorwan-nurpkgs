@@ -67,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru.updateScript = nix-update-script {
-    extraArgs = [ "--version-regex=v(\\d+\\.\\d+\\.\\d+)" ];
+    extraArgs = [ "--version-regex=v(\\d\\.\\d\\.\\d))" ];
   };
 
   meta = {
