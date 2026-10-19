@@ -20,23 +20,23 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "twintaillauncher-unwrapped";
-  version = "2.5.1";
+  version = "2.5.2";
   structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "TwintailTeam";
     repo = "TwintailLauncher";
     tag = "ttl-v${finalAttrs.version}";
-    hash = "sha256-A8A8Rn4dSE0ABvFD8VOeo83bgOOhChZPr/rn0tpx2F0=";
+    hash = "sha256-AAAAAAAASE0ABvFD8VOeo83bgOOhChZPr/rn0tpx2F0=";
   };
 
-  cargoHash = "sha256-Nm9jiHaI5frTBIGKe/gagZuAPkAeci0KP0eycU91anM=";
+  cargoHash = "sha256-AAAAAAaI5frTBIGKe/gagZuAPkAeci0KP0eycU91anM=";
 
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-q2FYYJ2NabXo5efcaulsdN78+tSaqRIUChIXpomGPx0=";
+    hash = "sha256-AAAAAAAAAbXo5efcaulsdN78+tSaqRIUChIXpomGPx0=";
   };
 
   # Set our Tauri source directory
